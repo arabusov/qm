@@ -13,7 +13,7 @@
 \only<2->{
 \draw[fill=black!10] (2,-2,-1) -- (2,-2,1) -- (2,2,1) -- (2,2,-1) -- (2,-2,-1);
 \begin{scope}[canvas is yz plane at x=2,rotate=-90]
-\node[circle,inner sep=0.5mm,fill,label=above:{$A$}] at (0,0.5){};
+\node[circle,inner sep=0.5mm,fill,label=above:{$A\;D$}] at (0,0.5){};
 \node[circle,inner sep=0.5mm,fill,label=below:{$B$}] at (0,-0.5) {};
 \end{scope}
 }
@@ -35,9 +35,10 @@
 	xmax=0.5,
 	ticks=none
 ]
-\addplot [samples=1000,red
+\addplot [samples=1000,blue
 ]
-{(cos(deg(5*pi*sin(deg(x)))))^(2)*((sin(deg(4*pi*sin(deg(x)))))/(4*pi*sin(deg(x))))^(2)};
+%{(cos(deg(5*pi*sin(deg(x)))))^(2)*((sin(deg(4*pi*sin(deg(x)))))/(4*pi*sin(deg(x))))^(2)};
+{((1/((x-0.2)^(2)+0.001))+(1/((x+0.2)^(2)+0.001)))};
 \end{axis}
 \end{scope}
 \draw[thin,densely dashed,blue] (2,0) -- (6.9,0);

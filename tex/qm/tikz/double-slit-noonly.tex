@@ -3,30 +3,21 @@
 % how-to-change-arrowheads-to-lie-on-a-plane
 \begin{tikzpicture}[scale=1.25]%,every node/.append style={transform shape}]
 \draw[color=white] (-2,-2) -- (8, 3);
-\only<1->{
 \fill (0.5,0,0) circle (0.05);
 \foreach \r in {0.25,0.5,...,1.75} {
 	\draw (0.5,0) ++(-60:\r) arc (-60:60:\r);
 \node[below left=-0.1cm] at (0,0) {$S$};
 }
-}
-\only<2->{
 \draw[fill=black!10] (2,-2,-1) -- (2,-2,1) -- (2,2,1) -- (2,2,-1) -- (2,-2,-1);
 \begin{scope}[canvas is yz plane at x=2,rotate=-90]
 \node[circle,inner sep=0.5mm,fill,label=above:{$A$}] at (0,0.5){};
 \node[circle,inner sep=0.5mm,fill,label=below:{$B$}] at (0,-0.5) {};
 \end{scope}
-}
-\only<3->{
 \foreach \r in {0.25,0.5,...,2} {
 	\draw (2,0.5) ++(-60:\r) arc (-60:60:\r);
 	\draw (2,-0.5) ++(-60:\r) arc (-60:60:\r);
 }
-}
-\only<4->{
 \draw[fill=black!10] (4,-2,-1) -- (4,-2,1) -- (4,2,1) -- (4,2,-1) -- (4,-2,-1);
-}
-\only<5->{
 \begin{scope}[xshift=4cm,yshift=2cm,rotate=-90,canvas is xy plane at z=0]
 \fill[white] (0,0) rectangle (4,4);
 \begin{axis}[
@@ -41,5 +32,4 @@
 \end{axis}
 \end{scope}
 \draw[thin,densely dashed,blue] (2,0) -- (6.9,0);
-}
 \end{tikzpicture}
