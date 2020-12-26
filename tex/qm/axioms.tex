@@ -1,0 +1,39 @@
+\subsection{Статические постулаты}
+\begin{frame}
+    \frametitle{Постулаты $1$--$2$}
+    \begin{itemize}[<+->]
+    \item[П1] Чистое состояние системы $\ket{\psi}$ описывается
+    вектором гильбертова пространства $\mathcal{H}$ над $\mathbb{C}$
+    \item[П2] Чистое состояние $\ket{\psi}$ задаётся
+    только направлением вектора из $\mathcal{H}$
+        \begin{itemize}[<+->]
+        \item Можно выбрать любую ненулевую нормировку, например
+        $$ \braket{\psi|\psi} = 1 $$
+        \item Эволюция замкнутой системы унитарна
+        $$ \ket{\psi (t)} = U (t, t_0) \ket{\psi (t_0)}$$
+        $$ U^\dagger (t, t_0) \; U (t, t_0) = \hat{\mathbb{1}} $$
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+\begin{frame}
+    \frametitle{Принцип суперпозиции (постулат 3)}
+    \begin{itemize}[<+->]
+    \item Положим, что квантовая система до измерения в состоянии
+    $\ket{\psi}$
+    \item После многократных измерений при помощи макроприбора
+    $\ket{\psi} \to \ket{\varphi_i}$
+    \item $\ket{\varphi_i}$ различимы при помощи макроприбора, т.~е.
+    $$ \braket {\varphi_i| \varphi_j} = \delta_{ij} = 
+        \begin{cases}
+        0 & \text {if $i \ne j $} \\
+        1 & \text {if $i = j $}
+        \end{cases}
+    $$
+    \item
+    $ \ket {\psi} = \sum\limits_i c_i \ket {\varphi_i},\;c_i \in \mathbb{C} $
+    \item[$\hat{\mathbb{P}}_{\varphi_i}$] Проекционный оператор
+    $\hat{\mathbb{P}}_{\varphi_i} = \ket{\phi_i}\bra{\phi_i}$
+    $$\hat{\mathbb{P}}_{\varphi_i}\ket{\psi} = \ket{\phi_i}$$
+    \item $\sum\limits_i \hat{\mathbb{P}}_{\varphi_i} = \hat{\mathbb{1}}$
+    \end{itemize}
+\end{frame}
