@@ -1,0 +1,38 @@
+\documentclass[t,aspectratio=169]{beamer}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+
+\usepackage{amsmath}
+\usepackage{bbm}
+\usepackage{verbatim}
+\usepackage{multimedia}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{pgfplots}
+\usetikzlibrary{3d}
+\usepackage{tikz}
+\usepackage{tikz-feynman}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows,automata,backgrounds,calendar,chains,matrix,mindmap,
+    patterns,petri,shadows,shapes.geometric,shapes.misc,spy,trees,calc}
+
+\newcommand{\Sp}[1]{\mathbbm {Sp} \left\{ {#1} \right\} }
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+\usepackage{url}
+\usefonttheme[onlymath]{serif}
+\graphicspath{{./images/}}
+
+\author[А. Рабусов]{Андрей Рабусов}
+\title[Квантовая физика]{Квантовая физика}
+\subtitle{Введение}
+\date{27 декабря 2020}
+\begin{document}
+\begin{frame}
+    \maketitle
+\end{frame}
+\input{tex/qm}
+\end{document}

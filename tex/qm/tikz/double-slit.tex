@@ -1,0 +1,50 @@
+% Taken from here:
+% https://tex.stackexchange.com/questions/469109/\
+% how-to-change-arrowheads-to-lie-on-a-plane
+\begin{tikzpicture}[scale=1.25,every node/.append style={transform shape}]
+\foreach \x in {-1,-0.75,...,0} {
+	\draw (\x,-1) -- (\x,1);
+}
+\draw[fill=black!10] (0.5,-2,-1) -- (0.5,-2,1) -- (0.5,2,1) -- (0.5,2,-1) -- (0.5,-2,-1);
+\fill (0.5,0,0) circle (0.05);
+\foreach \r in {0.25,0.5,...,1.75} {
+	\draw (0.5,0) ++(-60:\r) arc (-60:60:\r);
+}
+\draw[fill=black!10] (2,-2,-1) -- (2,-2,1) -- (2,2,1) -- (2,2,-1) -- (2,-2,-1);
+%\fill (2,0.5) circle (0.05) (2,-0.5) circle (0.05);
+\foreach \r in {0.25,0.5,...,2} {
+	\draw (2,0.5) ++(-60:\r) arc (-60:60:\r);
+	\draw (2,-0.5) ++(-60:\r) arc (-60:60:\r);
+}
+\draw[fill=black!10] (4,-2,-1) -- (4,-2,1) -- (4,2,1) -- (4,2,-1) -- (4,-2,-1);
+%       LABELLING
+\begin{scope}[canvas is yz plane at x=2,rotate=-90]
+\node[circle,inner sep=0.5mm,fill,label=above:{S${}_1$}] at (0,0.5){};
+\node[circle,inner sep=0.5mm,fill,label=below:{S${}_2$}] at (0,-0.5) {};
+\draw[dash pattern=on 1.5pt off 1pt,thin] (-0.5,0.5) -- (0,0.5)
+	(-0.5,-0.5) -- (0,-0.5);
+	\pgflowlevelsynccm          
+	\draw[|<->|] (-0.5,0.5) -- (-0.5,-0.5) node[midway,right=-0.1cm] {d};
+\end{scope}
+\begin{scope}[canvas is yz plane at x=0.5,rotate=-90]
+\node[below left=-0.1cm] at (0,0) {S${}_0$};
+\end{scope}
+\begin{scope}[xshift=4cm,yshift=2cm,rotate=-90,canvas is xy plane at z=0]
+\fill[white] (0,0) rectangle (4,4);
+\begin{axis}[
+	width=5.575cm,
+	xmin=-0.5,
+	xmax=0.5,
+	ticks=none
+]
+\addplot [samples=1000,blue
+]
+{(cos(deg(5*pi*sin(deg(x)))))^(2)*((sin(deg(4*pi*sin(deg(x)))))/(4*pi*sin(deg(x))))^(2)};
+\end{axis}
+\end{scope}
+\draw[thin,densely dashed,blue] (2,0) -- (6.9,0);
+\draw[thin,densely dashed,blue] (2,0) -- +(15:2.5);
+\draw[thin,densely dashed,blue] (2,0) -- +(-15:2.5);
+\draw[thin,densely dashed,blue] (2,0) -- +(32:2.5);
+\draw[thin,densely dashed,blue] (2,0) -- +(-32:2.5);
+\end{tikzpicture}
