@@ -1,5 +1,5 @@
 all:
-	pdflatex slides.tex
-	pdflatex slides.tex
+	pdflatex qm.tex
+	pdflatex qm.tex
 clean:
-	rm -rf slides.aux slides.log slides.nav slides.out slides.pdf slides.snm slides.toc
+	rm -rf qm.aux qm.log qm.nav qm.out qm.pdf qm.snm qm.toc
