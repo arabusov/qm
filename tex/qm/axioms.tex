@@ -37,3 +37,29 @@
     \item $\sum\limits_i \hat{\mathbb{P}}_{\varphi_i} = \hat{\mathbb{1}}$
     \end{itemize}
 \end{frame}
+\begin{frame}
+    \frametitle{Постулаты $4$--$5$}
+    \begin{itemize}[<+->]
+    \item[П4] Физический смысл $c_i$ (Макс Борн)
+        \begin{itemize}[<+->]
+        \item Пусть во время измерения $\ket{\psi}\to\ket{\varphi_i}$
+        \item Условная вероятность $w_i$ обнаружить систему в состоянии $i$:
+        $$ w_i = \abs{ c_i }^2 = \braket {\psi|\varphi_i}
+        \braket {\varphi_i|\psi} =
+        \Sp {\hat{\mathbb{P}}_\psi \hat{\mathbb{P}}_{\varphi_i}}$$
+        \end{itemize}
+    \item[П5] Среднее наблюдаемого
+        \begin{itemize}[<+->]
+        \item Набор наблюдаемых $\left \{ a_i \right \}$
+        (спектр, $a_i \in \mathbb{R}$)
+        \item
+        $\hat{\mathbb{A}} \ket{ a_i } = a_i \ket{ a_i }$,
+        $\hat{\mathbb{A}}$ --- эрмитовский оператор, $\ket {a_i}$ ---
+        собственные состояния оператора $\hat{\mathbb{A}}$
+        \item Среднее значение наблюдаемой $a$ по состоянию $\ket{\psi}$:
+        $$ \langle a \rangle = \braket {\psi | \hat{\mathbb{A}} | \psi} = 
+        \Sp {\hat{\mathbb{A}} \hat{\mathbb{P}}_\psi} $$
+
+        \end{itemize}
+    \end{itemize}
+\end{frame}
