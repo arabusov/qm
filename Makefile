@@ -1,5 +1,5 @@
 all:
-	pdflatex qm.tex
-	pdflatex qm.tex
+	pdflatex qph.tex
+	pdflatex qph.tex
 clean:
-	rm -rf qm.aux qm.log qm.nav qm.out qm.pdf qm.snm qm.toc
+	rm -rf *.aux *.log *.nav *.out *.snm *.toc
