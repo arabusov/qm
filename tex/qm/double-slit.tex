@@ -1,12 +1,12 @@
 \subsection{Двухщелевой опыт}
 \begin{frame}
-    \frametitle{Волновое поведение}
+    \frametitle{Интерференция}
     \begin{figure}
     \input{tex/qm/tikz/double-slit}
     \end{figure}
 \end{frame}
 \begin{frame}
-    \frametitle{Дополнительный детектор у щели $A$}
+    \frametitle{Дополнительный детектор у щели $A$ --- дифракция}
     \begin{figure}
     \input{tex/qm/tikz/double-slit-d}
     \end{figure}
@@ -16,4 +16,35 @@
     \begin{figure}
     \input{tex/qm/tikz/double-slit-noonly}
     \end{figure}
+\end{frame}
+\begin{frame}
+    \frametitle{Классическая логика}
+    \begin{itemize}[<+->]
+    \item Классическое описание:
+        \begin{itemize}[<+->]
+        \item Событие $A$ --- фотон прошёл через щель $A$
+        \item Событие $B$ --- фотон прошёл через щель $B$
+        \item Событие $C (x)$ --- фотон попал на фотопластину в точке $x$
+        \item Свойство операций <<и>>, <<или>> в классической логике:
+        $$ w \left \{C (x)\,\text{и}\,\left[A\;\text{или}\;B\right] \right \}
+        = 
+        w \left \{ \left [C (x)\,\text {и}\,A \right ]\,\text {или}\,
+            \left [C (x)\,\text {и}\,B \right ] \right \} $$
+        \end{itemize}
+    \item Квантовое описание:
+        \begin{itemize}[<+->]
+        \item
+        $ w \left \{C (x)\,\text{и}\,\left[A\;\text{или}\;B\right] \right \}$
+        --- интерференция
+        \item
+        $ w \left \{ \left [C (x)\,\text {и}\,A \right ]\,\text {или}\,
+            \left [C (x)\,\text {и}\,B \right ] \right \} $
+        --- дифракция
+        \item[ ]
+        $$ w \left \{C (x)\,\text{и}\,\left[A\;\text{или}\;B\right] \right \}
+        \ne 
+        w \left \{ \left [C (x)\,\text {и}\,A \right ]\,\text {или}\,
+            \left [C (x)\,\text {и}\,B \right ] \right \} $$
+        \end{itemize}
+    \end{itemize}
 \end{frame}
