@@ -1,6 +1,8 @@
 \documentclass[t,aspectratio=169]{beamer}
 
 \usetheme{Goettingen}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
 \setbeamertemplate{itemize items}{ }
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -27,9 +29,8 @@
 \newcommand{\Sp}[1]{\mathbbm {Sp} \left\{ {#1} \right\} }
 \usepackage{commath}
 %\newcommand\norm[1]{\left\lVert#1\right\rVert}
-\setbeamertemplate{navigation symbols}{}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
-\usepackage{url}
+\usepackage{hyperref}
 \usefonttheme[onlymath]{serif}
 \graphicspath{{./images/}}
 
@@ -41,6 +42,10 @@
 \begin{frame}
     \maketitle
 \end{frame}
-%\input{tex/qm}
+\begin{frame}{Содержание}
+  \tableofcontents[currentsection,sectionstyle=show,subsectionstyle=show]
+\end{frame}
+\input{tex/qm}
 \input{tex/qft}
+\input{tex/summary}
 \end{document}
